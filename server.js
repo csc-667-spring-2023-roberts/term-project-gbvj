@@ -7,6 +7,9 @@ const express = require("express");
 const app = express();
 // app.use(requestTime);
 
+app.set("views", path.join(__dirname, "backend", "views"));
+app.set("view engine", "pug");
+
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, "backend", "static")));
