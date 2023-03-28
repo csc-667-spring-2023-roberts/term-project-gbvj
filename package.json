@@ -1,0 +1,25 @@
+{
+  "name": "term-project-gbvj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server.js",
+    "start:dev": "nodemon --watch backend ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csc-667-spring-2023-roberts/term-project-gbvj.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csc-667-spring-2023-roberts/term-project-gbvj/issues"
+  },
+  "homepage": "https://github.com/csc-667-spring-2023-roberts/term-project-gbvj#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
