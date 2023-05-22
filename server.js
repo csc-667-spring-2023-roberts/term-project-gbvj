@@ -3,6 +3,8 @@ const createError = require("http-errors");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 
@@ -15,6 +17,10 @@ app.set("view engine", "pug");
 app.use(express.static(path.join(__dirname, "backend", "static")));
 
 const rootRoutes = require("./backend/routes/root");
+const testRoutes = require("./backend/routes/test/index.js");
+
+app.use("/test", testRoutes);
+
 app.use("/", rootRoutes);
 
 const PORT = process.env.PORT || 3000;
