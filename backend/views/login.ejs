@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body class="signup-body">
+    <div class="centered-content">
+      <ul class="nav-signup">
+        <h1 class="uno-title">
+          <a href="/" onclick="window.location.href = this.href; return false;"
+            >UNO</a
+          >
+        </h1>
+      </ul>
+    </div>
+    <div class="signUp-container">
+      <form
+        id="login-form"
+        class="signup-form"
+        method="post"
+      >
+        <h2>Login</h2>
+        <label for="user">
+          <em>Username:</em>
+          <input id="user" class="input-field" type="text" name="username" />
+        </label>
+        <label for="password">
+          <em>Password:</em>
+          <input
+            id="password"
+            class="input-field"
+            type="password"
+            name="password"
+          />
+        </label>
+        <p class="signup-text">
+          Don't have an account?
+          <a href="/signUp" class="signup-btn">Sign Up</a>
+        </p>
+
+        <input
+          class="submit-btn"
+          type="submit"
+          value="Login"
+          onclick="Login();"
+        />
+      </form>
+    </div>
+
+    <script>
+      function Login() {
+        var username = document.getElementById("user").value;
+        let user = {
+          username: username,
+        };
+        let s = JSON.stringify(user);
+        sessionStorage.setItem("login", s);
+      }
+      sessionStorage.removeItem("login");
+    </script>
+  </body>
+</html>

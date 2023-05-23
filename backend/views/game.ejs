@@ -1,0 +1,21 @@
+<div id="game-container">
+  <div id="game-board">
+    <!-- Game board elements (e.g., played cards, current color) -->
+  </div>
+  <div id="player-hands">
+    <% for (let i = 0; i < players.length; i++) { %>
+      <div class="player-hand">
+        <h3>Player <%= i + 1 %>: <%= players[i] %></h3>
+        <div class="card-box" id="card-box-<%= i %>">
+          <!-- Player's card elements will be added here -->
+        </div>
+      </div>
+    <% } %>
+  </div>
+  <div id="game-controls">
+    <button id="draw-card">Draw Card</button>
+    <button id="play-card">Play Card</button>
+    <button id="start-game">Start Game</button>
+  </div>
+</div>
+<script src="../logic/uno-game.js"></script>
