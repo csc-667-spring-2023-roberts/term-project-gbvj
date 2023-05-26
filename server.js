@@ -47,6 +47,7 @@ app.post("/signup", (req, res) => {
   res.redirect("/"); // Redirect to the home page
 });
 
+
 app.use((request, response, next) => {
   next(createError(404));
 });
